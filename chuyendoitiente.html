@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+select {
+    width: 150px;
+}
+td {
+    padding-right: 35px;
+}
+.bt{
+    background-color: blueviolet;
+     color: wheat;
+      width: 100px;
+}
+</style>
+<body>
+    <table>
+    <tr>
+        <td><b>Amount</b></td>
+        <td><b>From Currency</b></td>
+        <td><b>To Currency</b></td>
+    </tr>
+            <tr>
+                <form method="GET" action="chuyendoitiente.html"></form>
+                <td>
+                    <input type="text" id="Amou" name="Amou">
+                </td>
+                <td>
+                    <select>
+                        <option>VietNam</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>USD</option>
+                    </select>
+                </td>
+                <td style="padding-left: 35px;"><br>
+                    <input class="bt" type="button" value="convert" onclick="myconvert()"></td>
+                </form>
+            </tr>
+    </table>
+    <p id="mylife"></p>
+    <script>
+        function changeValue(){
+        let x = document.getElementById("Amou").value;
+        return x;
+        }
+        function myconvert(){
+            let a = changeValue();
+            let b = a / 23000;
+         document.getElementById("mylife").innerHTML = "Result:  " + b;
+        }
+    </script>
+</body>
+</html>
