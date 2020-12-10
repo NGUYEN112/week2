@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính</title>
+    <style>
+        input[type="text"] {
+            width: 150px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form>
+        <input name="a" id="a" type="text">
+        <input name="b" id="b" type="text"><br/>
+        <input type="button" id="add" value="Addition(+)" onclick="calculate(this.id)">
+        <input type="button" id="sub" value="Subtraction(-)" onclick="calculate(this.id)">
+        <input type="button" id="mul" value="Multiplication(X)" onclick="calculate(this.id)">
+        <input type="button" id="div" value="Division(/)" onclick="calculate(this.id)">
+    </form>
+    <p id="result"></p>
+    <script>
+        function calculate(cal) {
+            var a = Number(document.getElementById("a").value);
+            var b = Number(document.getElementById("b").value);
+            switch (cal) {
+                case "add":
+                    var kq = a + b;
+                    break;  
+                case "sub":
+                    var kq = a - b;
+                    break;
+                case "mul":
+                    var kq = a * b;
+                    break;
+                case "div":
+                    var kq = a / b;           
+            }
+            document.getElementById("result").innerHTML = kq;
+        }
+    </script>
+</body>
+</html>
