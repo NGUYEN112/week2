@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="number" min="1" max="12" style="width: 200px;"  id="month">
+<input type="button" id="b" style="width: 200px;" value="Tính số ngày" onclick="tinhsongay()">
+<p id="down"></p>
+    <script>
+        function tinhsongay(){
+            let select = Number(document.getElementById("month").value);
+            switch (select) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("down").innerHTML =("Tháng " + select + " có 31 ngày");
+                    break;
+                case 4: 
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("down").innerHTML =("Tháng " + select + " có 30 ngày");
+                    break;
+                case 2:
+                    document.getElementById("down").innerHTML =("Tháng " + select + " có 28 hoặc 29 ngày");
+                    break;
+                default:
+                document.getElementById("down").innerHTML =("Nhập lại đi mày");
+                    break;
+                }
+        }
+    </script>
+</body>
+</html>
